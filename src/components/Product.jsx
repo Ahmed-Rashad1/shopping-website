@@ -66,7 +66,7 @@ const Product = () => {
           <h3 className="display-6 fw-bold my-4"> $ {product.price}</h3>
           <p className="lead">{product.description}</p>
           <button className="btn btn-outline-dark px-4 py-2">
-            Add to Cart
+            Add to Cart 
           </button>
           <NavLink to="\cart" className="btn btn-dark ms-2 px-3">
             Go to Cart
