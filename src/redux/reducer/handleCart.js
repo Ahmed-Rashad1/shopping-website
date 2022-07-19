@@ -3,7 +3,7 @@ const cart = [];
 const handleCart = (state = cart, action) => {
   const product = action.payload;
   switch (action.type) {
-    case ADDITEM:
+    case "ADDITEM":
       const exist = state.find((x) => x.id === product.id);
       if (exist) {
         return state.map((x) =>
@@ -26,6 +26,7 @@ const handleCart = (state = cart, action) => {
       break;
 
     default:
+      return state;
       break;
   }
 };
