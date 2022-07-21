@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../App.css";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { NavLink } from "react-router-dom";
@@ -49,19 +50,25 @@ const Products = () => {
     const updatedList = data.filter((x) => x.category === cat);
     setFilter(updatedList);
   };
-  
+  const clickedButton = (event) => {
+    // event.currentTarget.parentNode.children.classList.remove("clicked");
+    event.currentTarget.classList.add("clicked");
+  };
   const ShowProducts = () => {
     return (
       <>
         <div className="buttons d-flex justify-content-center mb-5 pb-5">
           <button
-            className="btn btn-outline-dark me-2"
-            onClick={() => setFilter(data)}
+            className="btn btn-outline-dark me-2 clicked"
+            onClick={(event) => {
+              setFilter(data);
+              clickedButton();
+            }}
           >
             All
           </button>
           <button
-            className="btn btn-outline-dark me-2"
+            className="btn btn-outline-dark me-2 clicked"
             onClick={() => filterProduct("men's clothing")}
           >
             Men's Clothing
@@ -89,7 +96,10 @@ const Products = () => {
           return (
             <>
               <div className="col-md-3 mb-4">
-                <div className="card h-100 text-center p-4 " key={product.id}>
+                <div
+                  className="card bg-light h-100 text-center p-4 "
+                  key={product.id}
+                >
                   <img
                     className="card-img-top"
                     src={product.image}
