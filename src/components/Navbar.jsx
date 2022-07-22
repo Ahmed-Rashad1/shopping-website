@@ -9,7 +9,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg bg-light bg-white py-3 shadow-sm">
         <div className="container">
           <NavLink className="navbar-brand fw-bold fs-4" to="/">
-            DERO COLLECTION
+            MARKET
           </NavLink>
           <button
             className="navbar-toggler"
@@ -52,7 +52,7 @@ const Navbar = () => {
               <NavLink to="/register" className="btn btn-outline-dark me-2">
                 <i className="fa fa-user-plus me-1"></i> Register
               </NavLink>
-              <NavLink to="/card" className="btn btn-outline-dark">
+              <NavLink to="/cart" className="btn btn-outline-dark">
                 <i className="fa fa-shopping-cart me-1"></i> Cart (
                 {state.length})
               </NavLink>

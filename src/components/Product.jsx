@@ -76,7 +76,7 @@ const Product = () => {
           >
             Add to Cart
           </button>
-          <NavLink to="\cart" className="btn btn-dark ms-2 px-3">
+          <NavLink to="/cart" className="btn btn-dark ms-2 px-3">
             Go to Cart
           </NavLink>
         </div>
