@@ -44,5 +44,28 @@
     font-size: 11px;
     font-weight: 700;
   }
+  .cart-items {
+    text-align: center;
+  }
   
+}
+.cart-text{
+  margin-top: 150px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2567c7;
+  
+
+}
+.about{
+  color: #2567c7;
+}
+
+
+.cart{
+  max-width: 70%;
+}
+.cart-items {
+  text-align: center;
 }

@@ -7,6 +7,7 @@ import { Switch, Route } from "react-router-dom";
 import Product from "./components/Product";
 import Cart from "./components/Cart";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route exact path="/products/:id" component={Product} />
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/about" component={About} />
+        <Route exact path="/contact" component={Contact} />
       </Switch>
     </>
   );

@@ -30,17 +30,17 @@ const Products = () => {
   const Loading = () => {
     return (
       <>
-        <div className="col-md-3">
-          <Skeleton height={350} />
+        <div className="col-md-3 text-center">
+          <Skeleton height={450} width={300} />
         </div>
-        <div className="col-md-3">
-          <Skeleton height={350} />
+        <div className="col-md-3 text-center">
+          <Skeleton height={450} width={300}/>
         </div>
-        <div className="col-md-3">
-          <Skeleton height={350} />
+        <div className="col-md-3 text-center">
+          <Skeleton height={450} width={300}/>
         </div>
-        <div className="col-md-3">
-          <Skeleton height={350} />
+        <div className="col-md-3 text-center">
+          <Skeleton height={450} width={300}/>
         </div>
       </>
     );
@@ -61,6 +61,10 @@ const Products = () => {
           return (
             <>
               <div className="col-md-3 mb-4 w-100">
+              <NavLink
+                to={`/products/${product.id}`}
+                className="text-decoration-none text-dark"
+                >
                 <div
                   className="card bg-light h-100 text-center p-4 "
                   key={product.id}
@@ -78,12 +82,13 @@ const Products = () => {
                     <p className="card-text lead fw-bold">${product.price}</p>
                     <NavLink
                       to={`/products/${product.id}`}
-                      className="btn btn-outline-dark"
+                      className="btn btn-success"
                     >
                       Buy Now
                     </NavLink>
                   </div>
                 </div>
+                </NavLink>
               </div>
             </>
           );
