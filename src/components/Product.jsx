@@ -10,6 +10,7 @@ const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [toggle, setToggle] = useState(true);
   const refHandler = useRef();
 
   const dispatch = useDispatch();
@@ -32,6 +33,11 @@ const Product = () => {
   useEffect(() => {
     refHandler.current();
   }, []);
+
+  const handleToggle = () => {
+    setToggle(false);
+    setTimeout(() => setToggle(true), 3000);
+  };
 
   const Loading = () => {
     return (
@@ -72,9 +78,12 @@ const Product = () => {
           <p className="lead">{product.description}</p>
           <button
             className="btn btn-outline-dark px-4 py-2"
-            onClick={() => addProduct(product)}
+            onClick={() => {
+              handleToggle();
+              addProduct(product);
+            }}
           >
-            Add to Cart
+            {toggle ? "Add to Cart" : `your item added`}
           </button>
           <NavLink to="/cart" className="btn btn-dark ms-2 px-3">
             Go to Cart
