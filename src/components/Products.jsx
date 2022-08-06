@@ -135,7 +135,7 @@ const Products = () => {
           Electronics
         </button>
       </div>
-      <h1 className="display-6 fw-bolder text-center mb-5">{category.toUpperCase()}</h1>
+      <h1 className="display-6 fw-bolder text-center mb-5 ">{category.toUpperCase()}</h1>
       <div className="products">{loading ? <Loading /> : <ShowProducts />}</div>
     </div>
   );
