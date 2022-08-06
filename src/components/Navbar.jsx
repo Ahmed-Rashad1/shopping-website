@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Nav, Navbar, Container, Form, Button } from "react-bootstrap";
 
 const TheNavbar = () => {
   const state = useSelector((state) => state.handleCart);
+
+
+
   return (
     <>
       <Navbar bg="dark" variant="dark" expand="lg">
@@ -32,7 +35,7 @@ const TheNavbar = () => {
                 Contact
               </Nav.Link>
             </Nav>
-            <Form className="d-flex me-5" style={{width: "40%"}}>
+            <Form className="d-flex me-5" style={{width: "100%"}}>
               <Form.Control
                 type="search"
                 placeholder="Search"

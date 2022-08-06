@@ -28,9 +28,9 @@ const Cart = () => {
               width="180px"
             />
           </div>
-          <div className="col-md-4">
-            <h3>{product.title}</h3>
-            <p className="lead fw-bold">
+          <div className="col-md-4 mt-4">
+            <h3 className="fs-4">{product.title}</h3>
+            <p className="lead fw-bold fs-5 text-nowrap">
               {product.qty} X ${product.price} = ${product.qty * product.price}
             </p>
           <button className="btn px-3 btn-primary me-4" onClick={()=> addProduct(product)}>+</button>

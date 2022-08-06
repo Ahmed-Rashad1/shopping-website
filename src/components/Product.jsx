@@ -59,15 +59,15 @@ const Product = () => {
   const ShowProduct = () => {
     return (
       <>
-        <div className="col-md-6">
+        <div className="col-md-6 mb-5">
           <img
             src={product.image}
             alt={product.title}
-            height="400px"
-            width="400px"
+            height="300px"
+            width="300px"
           />
         </div>
-        <div className="col-md-6">
+        <div className="mx-auto px-3">
           <h4 className="text-uppercase text-black-50">{product.category}</h4>
           <h1 className="display-5">{product.title}</h1>
           <p className="lead fw-bolder">
@@ -94,8 +94,8 @@ const Product = () => {
   };
   return (
     <div>
-      <div className="container py-5">
-        <div className="row py-4">
+      <div className="container my-5 mx-auto">
+        <div className="row p-5">
           {loading ? <Loading /> : <ShowProduct />}
         </div>
       </div>

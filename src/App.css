@@ -2,15 +2,9 @@
   font-size: 18px;
 }
 
-.button {
-  background-color: rgb(9, 91, 214);
-  color: white;
-}
-
-
 .products {
   display: grid;
-  grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   width: 90%;
   margin: 80px auto;
@@ -19,22 +13,29 @@
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #000;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  -webkit-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
+  -webkit-user-select: text;
+  user-select: text;
+  /* background-color: ; */
+  border: none;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
-
+.btnn:hover {
+  background-color: slategray;
+  color: white;
+}
+.btnn:active {
+  background-color: rgb(18, 33, 49);
+  color: white;
+}
 @media (max-width: 600px) {
   .buttons {
     width: 80%;
@@ -47,23 +48,19 @@
   .cart-items {
     text-align: center;
   }
-  
 }
-.cart-text{
+.cart-text {
   margin-top: 150px;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
   color: #2567c7;
-  
-
 }
-.about{
+.about {
   color: #2567c7;
 }
 
-
-.cart{
+.cart {
   max-width: 70%;
 }
 .cart-items {

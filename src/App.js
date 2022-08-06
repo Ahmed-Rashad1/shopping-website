@@ -9,10 +9,13 @@ import Cart from "./components/Cart";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
+
+
+
 const App = () => {
   return (
     <>
-      <TheNavbar />
+      <TheNavbar/>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/products" component={Products} />

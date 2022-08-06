@@ -26,7 +26,7 @@ const Home = () => {
           src={ size ? "/images/sale2.jpg" : "/images/sale3.jpg"}
           className="card-img"
           alt="Background"
-          height="900px"
+          height="600px"
           width="900px"
         />
       <Products />
